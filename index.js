@@ -45,7 +45,7 @@ function Airplane(name) {
     this.stomach = [];
  }
  Person.prototype.eat = function(edible){
-   if(this.stomach.length <10){
+   if(this.stomach.length < 10){
      this.stomach.push(edible);
    }
  }
@@ -129,10 +129,14 @@ function Airplane(name) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Window binding - if we haven't given 'this' any context then it will return the window or the global object in node or undefinded in strict mode. 
+
+    2. Implicit binding - It applies to objects with methods. When the function(method) is invoked, look to the left of the dot and that is what 'this' refers to.
+
+    3. Explicit binding - we tell a function that the 'this' keyword should be using .call .apply or .bind. Call will immediately invoke the function and you pass in your arguments 1 by 1. Apply will immediately invoke the function and you pass in your arguments as an array. Bind will pass in your arguments 1 by 1 but it will not immediately invoke the function, instead it returns a brand new function that can be invoked later.
+
+    4. New binding - When a function is invoked with a new keyword the 'this' keyword inside that function is bound to the new object being constructed. When a function is invoked as a constructer function using the new keyword, this points to the new object that's created. 
+    
   */
   
   
